@@ -30,4 +30,15 @@ public class AccountService {
     }
 
 
+    public void deleteByAccountId(int accountId){
+        accountRepository.deleteById(accountId);
+    }
+
+    public long getCounts(){
+        return  accountRepository.count();
+    }
+
+
+
+
 }

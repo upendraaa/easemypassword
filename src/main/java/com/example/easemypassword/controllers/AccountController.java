@@ -30,6 +30,21 @@ public class AccountController {
         return accountService.findAllAccounts();
     }
 
+    @GetMapping("/data/counts")
+    public long getCounts(){
+        return accountService.getCounts();
+    }
+
+
+    @PostMapping("/data/delete/{accountId}")
+    public void deleteAccount(@PathVariable int accountId) {
+
+         accountService.deleteByAccountId(accountId);
+    }
+
+
+
+
 
 
 }
